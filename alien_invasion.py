@@ -18,9 +18,6 @@ def run_game():
     # Make a group to store bullets in.
     bullets = Group()
 
-    # Set the background color
-    bg_color = (230, 230, 230)
-
     # Start the main loop for the game
     while True:
         # Watch for keyboard and mouse events

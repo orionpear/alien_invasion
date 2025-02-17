@@ -13,6 +13,8 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
+    elif event.key == pygame.K_q:
+        sys.exit()
     
     if event.key == pygame.K_UP:
         ship.moving_up = True
