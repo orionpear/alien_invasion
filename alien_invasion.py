@@ -3,6 +3,7 @@ from pygame.sprite import Group
 
 from settings import Settings
 from ship import Ship
+from alien import Alien
 import game_functions as gf
 
 def run_game():
@@ -17,6 +18,7 @@ def run_game():
     ship = Ship(ai_settings, screen)
     # Make a group to store bullets in.
     bullets = Group()
+    alien = Alien(ai_settings, screen)
 
     # Start the main loop for the game
     while True:
@@ -26,6 +28,6 @@ def run_game():
         gf.update_bullets(bullets)
         
         # Update the screen
-        gf.update_screen(ai_settings, screen, ship, bullets)
+        gf.update_screen(ai_settings, screen, ship, alien, bullets)
     
 run_game()
