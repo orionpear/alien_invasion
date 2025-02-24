@@ -1,8 +1,6 @@
 """This module contains functions required for the operation of the game."""
 
-from socket import getnameinfo
 import sys
-from webbrowser import get
 
 import pygame
 
@@ -133,3 +131,8 @@ def create_fleet(ai_settings, screen, ship, aliens):
         for alien_number in range(number_aliens):
             create_alien(ai_settings,
                 screen, aliens, alien_number, row_number)
+
+
+def update_aliens(aliens):
+    """Update the position of all aliens in the fleet."""
+    aliens.update()
